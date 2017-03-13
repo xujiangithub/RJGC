@@ -65,7 +65,7 @@ use common\widgets\Alert;
                         <a class="page-scroll" href="single.html">相册</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="contact.html">后台</a>
+                        <a class="page-scroll" href="../../backend/web/index.php?r=login/login">后台</a>
                     </li>
                 </ul>
             </div>
