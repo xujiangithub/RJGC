@@ -11,4 +11,10 @@ class PageController extends \yii\web\Controller
         return $this->render('index');
     }
 
+    public function actionPicture()
+    {
+		$this->layout = "kong";
+        return $this->render('picture');
+    }
+
 }

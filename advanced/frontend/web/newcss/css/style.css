@@ -406,3 +406,23 @@ a.btn:focus{outline: 0;}
 .maps iframe{
     pointer-events: none;
 }
+/*
+aside { width: 310px; float: right; margin: 20px 0; }
+aside h2, footer h2 { font-size: 20px; margin-bottom: 10px; text-shadow: #000 1px 1px 1px; color: #fff }
+aside div { box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7); border-radius: 1px; padding: 1px; margin-bottom: 20px; overflow: hidden; }
+.tuijian li, .clicks li { white-space: nowrap; text-overflow: ellipsis; overflow: hidden }
+.tuijian li a:hover { padding-left: 10px }
+.tuijian li span:before { content: "0";}/* Êý×ÖÁÐ±íÇ°ÃæÍ³Ò»¼Ó0  */
+/*.tuijian li:nth-child(-n+3) span { width: 39px; color: #999;line-height: 40px  } /* Ñ¡Ôñ´ÓµÚ3¸ö¿ªÊ¼µ¹ÊýÒ²¾ÍÊÇµÚÈý¸öÇ°ÃæµÄ */
+/*.tuijian li:nth-child(-n+3) strong { font-size: 30px; font-weight: normal; }
+.tuijian li:first-child span { color: #f8490b; } /* Ñ¡ÔñµÚÒ»¸ö */
+/*.tuijian li:nth-child(n+3) { line-height: 24px } /* Ñ¡Ôñ´ÓµÚ3¸ö¿ªÊ¼ÍùºóÊý */
+/*.tuijian li:nth-child(4) { margin: 5px 0 0 0 } /* Ñ¡ÔñµÚËÄ¸ö */
+
+.myscroll{
+	position: absolute;
+	z-index:100;
+	top:44.7%;
+	left:48.3%;
+
+}

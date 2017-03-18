@@ -18,11 +18,18 @@ use common\widgets\Alert;
     <meta name="author" content="">
 
 	<title>软件工程</title>
+
+
   
 	<?=Html::cssFile('@web/newcss/css/bootstrap.min.css')?>
 	<?=Html::cssFile('@web/newcss/owl-carousel/owl.carousel.css')?>
 	<?=Html::cssFile('@web/newcss/css/style.css')?>
 	<?=Html::cssFile('@web/newcss/font-awesome-4.4.0/css/font-awesome.min.css')?>
+
+	<?=Html::cssFile('@web/frontassets/css/animation.css')?>
+	<?=Html::cssFile('@web/frontassets/css/lrtk.css')?>
+	<?=Html::cssFile('@web/frontassets/css/styles.css')?>
+	<?=Html::cssFile('@web/frontassets/css/view.css')?>
 	
 	
 	
@@ -62,7 +69,7 @@ use common\widgets\Alert;
                         <a class="page-scroll" href="archive.html">时间轴</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="single.html">相册</a>
+                        <a class="page-scroll" href="index.php?r=page/picture">相册</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="../../backend/web/index.php?r=login/login">后台</a>
@@ -88,7 +95,8 @@ use common\widgets\Alert;
 						<h1>这是一个集合了科技与时间轴的博客</h1>
 						<hr>
 						<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium.</p>
-						<a href="" class="btn btn-primary btn-xl page-scroll">&nbsp;文章浏览&nbsp;</a>
+						<a href="#lf" name="1F" class="btn btn-primary btn-xl page-scroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
 					</div>
 				</div><!-- /header-text -->
 				</div>
@@ -100,12 +108,15 @@ use common\widgets\Alert;
 						<h1>黑色主题</h1>
 						<hr>
 						<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
-						<a href="" class="btn btn-primary btn-xl page-scroll">&nbsp;文章浏览&nbsp;</a>
+						<div class="nu">
+						<a href="#lf"  class="btn btn-primary btn-xl page-scroll" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
 					</div>
 				</div><!-- /header-text -->
 			</div>
 			
 		</div>
+		<a href="#pic" class="myscroll"><p style="font-size: 20px;color:#fff">文章浏览</p></a>
+		<div id="pic" ></div>
 		<!-- Controls -->
 		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left"></span>
@@ -113,15 +124,16 @@ use common\widgets\Alert;
 		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right"></span>
 		</a>
+
 	</div> <!-- Carousel -->
 	
 
 	<!-- /////////////////////////////////////////Content -->
 	
-	<header class="container">
-		<?= $content ?>
-	</header>
 	
+	<div id="lf" class="container" name="lf">
+		<?= $content ?>
+	</div>
   
   
   
@@ -135,6 +147,12 @@ use common\widgets\Alert;
 	<?=Html::jsFile('@web/newcss/js/jquery.easing.min.js')?>
 	<?=Html::jsFile('@web/newcss/js/classie.js')?>
 	<?=Html::jsFile('@web/newcss/js/cbpAnimatedHeader.js')?>
+
+
+	<?=Html::jsFile('@web/frontassets/js/jquery.js')?>
+	<?=Html::jsFile('@web/frontassets/js/js.js')?>
+	<?=Html::jsFile('@web/frontassets/js/modernizr.js')?>
+	<?=Html::jsFile('@web/frontassets/js/silder.js')?>>
   
   <?php $this->endBody() ?>
 	
