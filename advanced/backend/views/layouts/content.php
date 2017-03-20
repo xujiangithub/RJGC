@@ -1,19 +1,33 @@
+
+
+
+
+
+
+
 <?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use frontend\assets\AppAsset;
+use common\widgets\Alert;
+
+AppAsset::register($this);
 ?>
-
-<!doctype html>
-<html lang="en">
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
-
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
     
     
     <!-- Bootstrap core CSS     -->
@@ -36,14 +50,14 @@ use yii\bootstrap\ActiveForm;
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 </head>
 <body> 
-
+<?php $this->beginBody() ?>
 <div class="wrapper">
     <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">  
     
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
     
     
-    	<div class="sidebar-wrapper">
+        <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
                     博客后台管理
@@ -64,7 +78,7 @@ use yii\bootstrap\ActiveForm;
                     </a>
                 </li> 
             </ul> 
-    	</div>
+        </div>
     </div>
     
     <div class="main-panel">
@@ -78,7 +92,7 @@ use yii\bootstrap\ActiveForm;
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="">
-                               Account
+                               用户名
                             </a>
                         </li>
                         <li class="dropdown">
@@ -98,7 +112,7 @@ use yii\bootstrap\ActiveForm;
                         </li>
                         <li>
                             <a href="#">
-                                Log out
+                                退出
                             </a>
                         </li> 
                     </ul>
@@ -107,70 +121,41 @@ use yii\bootstrap\ActiveForm;
         </nav>
                      
               <div class="container">
-		<?= $content ?>
-	</div>       
+      
+        <?= Alert::widget() ?>
+        <?= $content ?>
+    </div>
 
         
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <!-- <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                               Blog
-                            </a>
-                        </li>
-                    </ul> -->
-                </nav>
-               <!--  <p class="copyright pull-right">
-                    &copy; 2015 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p> -->
-            </div>
-        </footer>
         
         
     </div>   
 </div>
-
+<?php $this->endBody() ?>
 
 </body>
 
-    <!--   Core JS Files   -->
-    <?=Html::jsFile('@web/admincss/js/jquery-1.10.2.js')?>
+   <!--   Core JS Files   -->
+    <?=Html::jsFile('@web/newcss/js/jquery-2.1.1.js')?>
    <?=Html::jsFile('@web/admincss/js/bootstrap.min.js')?>
-	
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<?=Html::jsFile('@web/admincss/js/bootstrap-checkbox-radio-switch.js')?>
-	
-	<!--  Charts Plugin -->
-	<?=Html::jsFile('@web/admincss/js/chartist.min.js')?>
+    
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <?=Html::jsFile('@web/admincss/js/bootstrap-checkbox-radio-switch.js')?>
+    
+    <!--  Charts Plugin -->
+    <?=Html::jsFile('@web/admincss/js/chartist.min.js')?>
 
     <!--  Notifications Plugin    -->
     <?=Html::jsFile('@web/admincss/js/bootstrap-notify.js')?>
     
-    <!--  Google Maps Plugin    -->
+    <!--  Google Maps Plugin    --><!--
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	
+    -->
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
     <?=Html::jsFile('@web/admincss/js/light-bootstrap-dashboard.js')?>
-	
-	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<?=Html::jsFile('@web/admincss/js/demo.js')?>
+    
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <?=Html::jsFile('@web/admincss/js/demo.js')?>
 
-	
 </html>
+<?php $this->endPage() ?>
